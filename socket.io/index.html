@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Socket.IO example application</title>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script>
+      window.onload = function() {
+        var callsDiv = document.getElementById('calls');
+        console.log('div', callsDiv);
+        var socket = io.connect('http://localhost:3000');
+
+        socket.on('phone event', function(msg) {
+          callsDiv.innerHTML = callsDiv.innerHTML + '<p>' + msg.data + '</p>';
+        })
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>calls dashboard</div>
+    <div id='calls'></div>
+  </body>
+</html>

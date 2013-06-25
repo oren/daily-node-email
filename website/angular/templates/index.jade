@@ -1,0 +1,29 @@
+!!! 5
+html(ng-app='presence')
+  head
+    title Presence Manager
+    meta(content='Presence', name='description')
+    meta(content='text/html; charset=UTF-8', http-equiv='Content-Type')
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1', name='viewport')
+    // link(href='public/images/favicon.ico', rel='shortcut icon')
+    // link(href='public/css/app.css', rel='stylesheet')
+  body
+    h1 Manage your online presence
+    h3 Update your business listings on 100 sites, apps and maps
+
+    h2 Scan Your Business
+    .scan-form(ng-controller='Scan')
+      label(for='name') Name: 
+      input(ng-model='name', name='name')
+      br
+      br
+      label(for='phone') Phone: 
+      input(ng-model='phone', name='phone')
+      p
+        button(ng-click="scan()") Scan
+      p(ng-show='scanning') Scanning...
+
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
+    script(src='public/js/app.js')
+    script(src='public/js/controllers/scan.js')
