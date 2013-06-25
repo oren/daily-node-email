@@ -19,6 +19,6 @@ http.createServer(function(req, res) {
 
   req.pipe(clientReq);
 
-}).listen(4000);
+}).listen(3000);
 
-console.log('Proxy server Listening - http://localhost:4000');
+console.log('Proxy server Listening - http://localhost:3000');
