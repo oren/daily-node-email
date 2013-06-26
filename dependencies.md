@@ -1,4 +1,4 @@
-# Versioning dependencies in Node
+# Dependencies in Node
 
 TLDR
 
