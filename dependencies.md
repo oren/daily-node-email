@@ -15,7 +15,7 @@ There are a 2 ways to achieve that:
 1. [`npm shrinkwrap`][1].
 
 ## Check-in node_modules
-**Pro**
+**Pros**
 
 1. Guarantee that you deploy identical versions.
 1. Less external dependencies during deploy time. If github (or our internal npm repository) is down, you can still deploy your app.
@@ -26,7 +26,7 @@ There are a 2 ways to achieve that:
 1. Compiled dependencies (solved by your new friend [`npm rebuild`][2]).
 
 ## Shrinkwrap
-**Pro**
+**Pros**
 
 1. You are more DRY (don't repeat yourself) - There is only one place where you define your project's packages, and it's the npm-shrinkwrap.json file.
 1. Some commits might look ugly (solved by commiting dependency changes separately)
